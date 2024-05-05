@@ -10,9 +10,8 @@
  */
 ?>
 
-    </div><!-- #content -->
 
-    <footer id="colophon" class="site-footer" role="contentinfo">
+    <footer id="colophon" class="site-footer footer text-center py-4 theme-bg-dark" role="contentinfo">
         <div class="container">
             <nav class="footer-navigation" role="navigation">
                 <?php
