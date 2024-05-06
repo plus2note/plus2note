@@ -49,3 +49,4 @@ wp-config.php
 
 #Extar file
 .env
+.vscode
