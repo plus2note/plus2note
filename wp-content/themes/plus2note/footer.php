@@ -11,23 +11,53 @@
 ?>
 
 
-    <footer id="colophon" class="site-footer footer text-center py-4 theme-bg-dark" role="contentinfo">
-        <div class="container">
-            <nav class="footer-navigation" role="navigation">
-                <?php
+<footer class="site-footer">
+    <div class="container footer-content">
+        <div class="footer-info">
+            <h3>Plus2Note</h3>
+            <p>Briefly introduce your website and your team. Explain your mission, vision, and goals.</p>
+        </div>
+        <div class="footer-info">
+            <h3>Subjects</h3>
+            <ul>
+                <li>Nepali</li>
+                <li>English</li>
+                <li>Account</li>
+            </ul>
+        </div>
+        <div class="footer-links">
+        <?php
                 wp_nav_menu(array(
                     'theme_location' => 'footer',
                     'menu_id'        => 'footer-menu',
                     'container'      => false,
                 ));
                 ?>
-            </nav><!-- .footer-navigation -->
-
+        </div>
+        
+    </div>
+    
+</footer>
+<section id="copyright">
+    <div class="container">
+        <div class="copyright">
             <div class="site-info">
-                <?php printf(esc_html__('© %s Plus2Note. All rights reserved.', 'plus2note'), date('Y')); ?>
-            </div><!-- .site-info -->
-        </div><!-- .container -->
-    </footer><!-- #colophon -->
+                    <?php printf(esc_html__('© %s Plus2Note. All rights reserved.', 'plus2note'), date('Y')); ?>
+            </div>
+            <div class="policy-menu">
+                <?php
+                    wp_nav_menu(array(
+                        'theme_location' => 'policy',
+                        'menu_id' => 'policy-menu',
+                        'container' => false,
+                    ))
+                ?>
+            </div>
+        </div>
+    </div>
+</section>
+
+</main><!-- #main -->
 
 
 <?php wp_footer(); ?>

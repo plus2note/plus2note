@@ -19,7 +19,8 @@ add_action('wp_enqueue_scripts', 'plus2note_enqueue_scripts');
 function plus2note_register_menus() {
     register_nav_menus(array(
         'primary' => __('Primary Menu', 'plus2note'),
-        'footer'  => __('Footer Menu', 'plus2note')
+        'footer'  => __('Footer Menu', 'plus2note'),
+        'policy'  => __('Policy Menu', 'plus2note')
     ));
 }
 add_action('init', 'plus2note_register_menus');
