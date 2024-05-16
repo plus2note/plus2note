@@ -31,14 +31,17 @@
                 <?php ?>
                 <a class="site-title pt-lg-4 mb-0" href="<?php echo site_url(); ?>"><?php bloginfo('name'); ?></a>
             </h1>
-            <nav class="navbar">
-            <?php
-                wp_nav_menu(array(
-                'theme_location' => 'primary',
-                'menu_class' => 'navbar-menu',
-                ));
+            <nav id="custom-menu">
+            <div id="menu-toggle" class="menu-toggle">
+                <span class="line"></span>
+            </div>
+                <?php
+                    wp_nav_menu(array(
+                        'theme_location' => 'primary',
+                        'menu_id' => 'primary-menu',
+                        'container' => false
+                    ));
                 ?>
-
             </nav>
         </div>	    
     </header>

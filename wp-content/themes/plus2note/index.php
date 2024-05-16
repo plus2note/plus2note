@@ -15,27 +15,22 @@
 get_header();
 ?>
 
-<main id="primary" class="site-main">
-    <div class="container">
-        <?php
-        if (have_posts()) :
 
-            /* Start the Loop */
-            while (have_posts()) :
-                the_post();
+	    
+	<article class="content px-3 py-5 p-md-5">
+		<?php
+			if(have_posts()){
+				while(have_posts()){
+					the_post();
+					get_template_part('template-parts/content', 'archive');
+				}
+			}
 
-                get_template_part('template-parts/content', get_post_type());
+		?>
+	</article>
 
-            endwhile;
 
-        else :
 
-            get_template_part('template-parts/content', 'none');
-
-        endif;
-        ?>
-    </div><!-- .container -->
-</main><!-- #main -->
 
 <?php
 get_footer();

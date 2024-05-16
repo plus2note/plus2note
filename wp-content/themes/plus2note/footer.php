@@ -12,29 +12,46 @@
 
 
 <footer class="site-footer">
-    <div class="container footer-content">
+    <div class="container">
+        <div class="footer-content">
         <div class="footer-info">
             <h3>Plus2Note</h3>
-            <p>Briefly introduce your website and your team. Explain your mission, vision, and goals.</p>
-        </div>
-        <div class="footer-info">
-            <h3>Subjects</h3>
+            <p>Comprehensive study notes and resources for Class 11 and 12 students. Unlock Your Academic Potential 👋</p>
             <ul>
-                <li>Nepali</li>
-                <li>English</li>
-                <li>Account</li>
+                <li><a href=""><img src="" alt=""></a></li>
             </ul>
         </div>
-        <div class="footer-links">
-        <?php
-                wp_nav_menu(array(
-                    'theme_location' => 'footer',
-                    'menu_id'        => 'footer-menu',
-                    'container'      => false,
-                ));
-                ?>
+        <div class="footer-info">
+            <h3>Notes</h3>
+            <?php
+            // Get all categories
+            $categories = get_categories();
+            
+            // Check if there are any categories
+            if ($categories) {
+                echo '<ul>';
+                // Loop through each category
+                foreach ($categories as $category) {
+                    // Generate category link
+                    $category_link = get_category_link($category->term_id);
+                    // Output category name with link
+                    echo '<li><a href="' . esc_url($category_link) . '">' . esc_html($category->name) . '</a></li>';
+                }
+                echo '</ul>';
+                }
+            ?>
+
         </div>
-        
+        <div class="footer-links">
+            <div class="newsletter">
+                <h3>Subscribe to Newsletter</h3>
+                <form action="#">
+                    <input type="email" placeholder="Enter your email">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div> 
+        </div>
+        </div>
     </div>
     
 </footer>
