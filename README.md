@@ -50,13 +50,6 @@ Customize your theme using the WordPress Customizer:
 2. Adjust settings for layouts, colors, fonts, and more to match your brand or personal preferences.
 3. Save your changes.
 
-## Required Plugins
-
-Depending on the theme version, you may need to install and activate the following plugins for additional functionality:
-
-- [Contact Form 7](https://wordpress.org/plugins/contact-form-7/)
-- [WooCommerce](https://wordpress.org/plugins/woocommerce/)
-- [Yoast SEO](https://wordpress.org/plugins/wordpress-seo/)
 
 ## Contributing
 
