@@ -1,0 +1,274 @@
+/*
+Theme Name: Plus2Note
+Theme URI: https://example.com/plus2note
+Description: A simple and clean WordPress theme named Plus2Note.
+Version: 1.0
+Author: Pradip Chaudhary
+Author URI: https://pradipchaudhary.com.np/
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: plus2note
+Tags: responsive-layout, accessibility-ready, custom-background, custom-logo, custom-menu, featured-images, footer-widgets, full-width-template, sticky-post, threaded-comments, translation-ready
+*/
+
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.plus2note-theme-body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+  color: #000000;
+}
+
+/* Container */
+.plus2note-theme-container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  /* border-left: double red; */
+  /* border-right: double #646bf7; */
+}
+
+@media (min-width: 576px) {
+  .plus2note-theme-container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .plus2note-theme-container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .plus2note-theme-container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .plus2note-theme-container {
+    max-width: 1140px;
+  }
+}
+/* Section */
+
+p {
+  font-size: 1.2rem;
+  color: #000;
+  line-height: 2rem;
+}
+.plus2note-theme-body {
+  background-color: #e5e5f7;
+}
+/* Header */
+.plus2note-theme-header {
+  /* border-bottom: double red; */
+  background-color: #e5e5f7;
+  opacity: 0.8;
+  background-size: 35px 35px;
+  background-image: repeating-linear-gradient(
+    0deg,
+    #444cf7,
+    #444cf7 1px,
+    #e5e5f7 1px,
+    #e5e5f7
+  );
+  background-position: bottom center;
+  margin-bottom: 0px;
+}
+
+.plus2note-header-content {
+  padding: 35px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.plus2note-theme-header h1 {
+  margin: 0;
+  text-align: center;
+  font-size: 1.8rem;
+  text-transform: lowercase;
+  font-weight: 600;
+}
+.plus2note-theme-header h1 a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+.plus2note-theme-header nav {
+  text-align: center;
+  margin-top: 10px;
+}
+.plus2note-theme-header nav ul {
+  display: flex;
+  list-style: none;
+}
+.plus2note-theme-header nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #000000;
+  font-size: 1rem;
+  font-weight: 400;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 3px;
+  transition: color 0.3s ease-in-out; /* Add transition for color */
+}
+.plus2note-theme-header nav a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #000; /* Change to desired border color */
+  transition: width 0.3s ease-in-out;
+}
+
+.plus2note-theme-header nav a:hover::after {
+  width: 100%;
+}
+.plus2note-theme-header nav a:hover {
+  color: #000000; /* Change to desired hover color */
+}
+/* === Hero Section === */
+#plus2note-hero {
+  width: 100%;
+  height: 670px;
+  background-color: #e5e5f7;
+  opacity: 0.8;
+  background-size: 35px 35px;
+  background-image: repeating-linear-gradient(
+    0deg,
+    #444cf7,
+    #444cf7 1px,
+    #e5e5f7 1px,
+    #e5e5f7
+  );
+  background-position: top center;
+}
+.hero-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.hero-info {
+  flex: 1; /* Each box will take up an equal amount of space */
+}
+.hero-info .hero-title {
+  font-size: 2.8rem;
+  color: #000000;
+  font-weight: 500;
+  line-height: 4rem;
+}
+.hero-info .hero-des {
+  margin-top: 18px;
+  color: #000000;
+}
+.hero-info a.btn {
+  margin-top: 25px;
+  border: none;
+  background: transparent;
+  font-size: 1.1rem;
+  /* border-bottom: 1px solid #000; */
+  /* text-transform: uppercase; */
+  color: #000;
+  display: block;
+  font-weight: 500;
+}
+.hero-info .social-icon {
+  margin-top: 3rem;
+}
+.hero-info .social-icon ul {
+  display: flex;
+  list-style: none;
+}
+.hero-info .social-icon ul li {
+  width: 40px;
+  height: 40px;
+}
+.hero-info .social-icon ul li a {
+  padding: 6px;
+}
+.hero-info .social-icon ul li a img {
+  width: 26px;
+}
+.hero-video {
+  flex: 1; /* Each box will take up an equal amount of space */
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-video img {
+  width: 400px;
+  border-radius: 2px;
+}
+/* Main Content */
+.plus2note-theme-content {
+  padding: 20px 0;
+}
+
+.plus2note-theme-post-content {
+  margin-bottom: 40px;
+}
+
+.plus2note-theme-post-content h2 {
+  color: #007bff;
+}
+
+/* Sidebar */
+.plus2note-theme-sidebar {
+  padding: 20px;
+  background-color: #f8f9fa;
+}
+
+.plus2note-theme-widget {
+  margin-bottom: 20px;
+}
+
+.plus2note-theme-widget-title {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+/* Footer */
+.plus2note-theme-footer {
+  /* background-color: #333;
+  color: white; */
+  height: 200px;
+  text-align: center;
+  /* padding: 10px 0; */
+  background-color: #e5e5f7;
+  opacity: 0.8;
+  background-size: 35px 35px;
+  background-image: repeating-linear-gradient(
+    0deg,
+    #444cf7,
+    #444cf7 1px,
+    #e5e5f7 1px,
+    #e5e5f7
+  );
+  background-position: top center;
+}
+
+.plus2note-theme-footer p {
+  margin: 0;
+}
+
+/* Additional styles for single posts and pages */
+.plus2note-theme-single-post .plus2note-theme-post-content,
+.plus2note-theme-page .plus2note-theme-post-content {
+  margin-bottom: 40px;
+}

@@ -15,33 +15,25 @@
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
     
     <!-- Google fonts -->
+   
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
     <?php wp_head(); ?>
 </head>
-<body <?php body_class('plus2note'); ?>>
+<body <?php body_class('plus2note-theme-body'); ?>>
   
-<main id="primary" class="site-main">
-    <div id="plus2note_bg"> </div>  <!-- // background image with color -->
-    <!-- Header Section  -->
-    <header id="page-header">	    
-        <div class="container plus2note_header">
-            <h1 class="plus2note_logo">
-                <?php ?>
-                <a class="site-title pt-lg-4 mb-0" href="<?php echo site_url(); ?>"><?php bloginfo('name'); ?></a>
-            </h1>
-            <nav id="custom-menu">
-            <div id="menu-toggle" class="menu-toggle">
-                <span class="line"></span>
+    <header class="plus2note-theme-header">
+        <div class="plus2note-theme-container">
+            <div class="plus2note-header-content">
+                <h1>
+                    <a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a>
+                </h1>
+                <nav>
+                    <?php wp_nav_menu(array('theme_location' => 'primary')); ?>
+                </nav>
             </div>
-                <?php
-                    wp_nav_menu(array(
-                        'theme_location' => 'primary',
-                        'menu_id' => 'primary-menu',
-                        'container' => false
-                    ));
-                ?>
-            </nav>
-        </div>	    
+            
+        </div>
     </header>
