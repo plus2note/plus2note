@@ -1,80 +1,90 @@
 # Plus2Note WordPress Theme
 
-Welcome to the Plus2Note WordPress Theme repository. This theme is designed to provide a modern, responsive, and highly customizable experience for WordPress users.
-
-## Table of Contents
-
-- [Features](#features)
-- [Installation](#installation)
-- [Customization](#customization)
-- [Required Plugins](#required-plugins)
-- [Contributing](#contributing)
-- [Support](#support)
-- [License](#license)
+**Plus2Note** is a custom WordPress theme developed for the project _Plus2Note_. It is a lightweight, fully responsive theme with a clean, minimal design and a focus on simplicity. This theme is designed for ease of customization and can be extended further to meet specific project requirements.
 
 ## Features
 
-- **Version Control with Git**: Manage theme versions easily and collaborate with other developers.
-- **Modern Design**: Clean, modern aesthetics with responsive layouts.
-- **Customization Options**: Extensive customization options for layouts, colors, and fonts.
-- **Performance Optimization**: Lightweight and optimized for speed and SEO.
-- **Developer-Friendly**: Clean, well-documented code that is easy to extend and modify.
+-   Responsive design
+-   Clean, minimal UI
+-   Customizable navigation menu
+-   Widgetized sidebar
+-   Supports featured images (post thumbnails)
+-   Basic blog structure for posts, pages, categories, archives, and 404 pages
+
+## Theme Folder Structure
+
+```plaintext
+plus2note/
+│
+├── style.css
+├── index.php
+├── functions.php
+├── header.php
+├── footer.php
+├── sidebar.php
+├── single.php
+├── page.php
+├── archive.php
+├── category.php
+├── 404.php
+├── assets/
+│   ├── css/
+│   │   └── main.css
+│   ├── js/
+│   │   └── main.js
+│   └── images/
+├── template-parts/
+│   ├── content.php
+│   └── content-single.php
+└── inc/
+    └── customizer.php
+```
+
+### Key Files:
+
+-   **style.css**: Contains theme metadata and basic styles.
+-   **index.php**: The main template for the homepage and blog index.
+-   **functions.php**: Contains theme setup and custom functionalities such as enqueuing scripts and styles, registering menus, and widget areas.
+-   **header.php**: Template for the header section, including the navigation menu.
+-   **footer.php**: Template for the footer section.
+-   **sidebar.php**: Template for the sidebar with dynamic widgets.
+-   **single.php**: Template for displaying individual blog posts.
+-   **page.php**: Template for individual pages.
+-   **archive.php**: Template for archive pages like categories or tags.
+-   **category.php**: Template for displaying posts within a specific category.
+-   **404.php**: Template for the 404 error page.
+
+### Asset Files:
+
+-   **assets/css/main.css**: Contains custom CSS styles for the theme.
+-   **assets/js/main.js**: Contains custom JavaScript for the theme.
+
+### Template Parts:
+
+-   **template-parts/content.php**: Template for displaying post excerpts in loops.
+-   **template-parts/content-single.php**: Template for displaying the content of a single post.
+
+### Customizer:
+
+-   **inc/customizer.php**: This file is used to manage theme customizer settings.
 
 ## Installation
 
-### Prerequisites
-
-- WordPress 5.0 or higher
-- PHP 7.2 or higher
-
-### Steps
-
-1. **Clone the Repository**:
-    ```bash
-    git clone https://github.com/yourusername/plus2note-theme.git
-    ```
-
-2. **Upload to WordPress**:
-   - Compress the `plus2note-theme` directory into a .zip file.
-   - Navigate to the WordPress dashboard, go to `Appearance > Themes`, and click `Add New`.
-   - Click `Upload Theme`, choose the .zip file, and click `Install Now`.
-
-3. **Activate the Theme**:
-   - After installation, click `Activate`.
+1. Download or clone this repository to your WordPress `wp-content/themes` directory.
+2. Activate the theme in your WordPress admin panel under **Appearance > Themes**.
+3. Customize the theme settings and content as needed.
 
 ## Customization
 
-Customize your theme using the WordPress Customizer:
-
-1. Go to `Appearance > Customize`.
-2. Adjust settings for layouts, colors, fonts, and more to match your brand or personal preferences.
-3. Save your changes.
-
-
-## Contributing
-
-We welcome contributions to enhance the Plus2Note WordPress theme. To contribute:
-
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature-branch`).
-3. Commit your changes (`git commit -m 'Add new feature'`).
-4. Push to the branch (`git push origin feature-branch`).
-5. Create a new Pull Request.
-
-Please ensure your code adheres to our coding standards and is well-documented.
-
-## Support
-
-For support and troubleshooting:
-
-- Check the [documentation](https://yourdocumentationlink.com).
-- Visit the [community forums](https://yourforumlink.com) for help.
-- Contact our support team via email at support@plus2note.com.
+-   Modify the CSS styles in `assets/css/main.css` to change the appearance of the theme.
+-   Add your own JavaScript functionality in `assets/js/main.js`.
+-   Edit the PHP files to change the structure of your pages, posts, and widgets.
+-   Use the `functions.php` file to add more custom functionality, such as additional widgets or post formats.
 
 ## License
 
-This theme is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
+This theme is open-source and licensed under the [GNU General Public License v2 or later](https://www.gnu.org/licenses/gpl-2.0.html).
 
 ---
 
-Thank you for using the Plus2Note WordPress Theme!
+Created by **Pradip Chaudhary** for the project **Plus2Note**.
