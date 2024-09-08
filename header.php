@@ -23,13 +23,18 @@
     <?php wp_head(); ?>
 </head>
 <body <?php body_class('plus2note-theme-body'); ?>>
-  
+
     <header class="plus2note-theme-header">
         <div class="plus2note-theme-container">
             <div class="plus2note-header-content">
-                <h1>
-                    <a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a>
-                </h1>
+                <!-- Logo here... -->
+                    <?php if (get_theme_mod('plus2note_logo')) : ?>
+                    <img src="<?php echo esc_url(get_theme_mod('plus2note_logo')); ?>" alt="<?php bloginfo('name'); ?>">
+                    <?php else : ?>
+                    <h1><?php bloginfo('name'); ?></h1>
+                    <?php endif; ?>
+                
+                <!-- Navbar -->
                 <nav>
                     <?php wp_nav_menu(array('theme_location' => 'primary')); ?>
                 </nav>
